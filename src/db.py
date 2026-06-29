@@ -52,3 +52,15 @@ def count_rows(connection, table_name):
     result = cursor.fetchone()
 
     return result[0]
+
+def preview_rows(connection, table_name, limit):
+    cursor = connection.cursor()
+
+    sql = f"SELECT * FROM {table_name} LIMIT {limit}"
+    
+    cursor.execute(sql)
+
+    result = cursor.fetchall()
+
+    return result
+
