@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 data/*.csv
 data/*.db
+log.txt
+*.log
