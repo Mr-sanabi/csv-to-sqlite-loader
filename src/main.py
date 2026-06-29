@@ -19,6 +19,7 @@ def parse_args():
 def main():
     args = parse_args()
     setup_logging()
+    print("==================== PREVIEW ROWS ====================")
     logging.info("Starting program")
     headers, rows = read_csv(args.csv_file)
 
@@ -56,6 +57,7 @@ def main():
 
     connection.close()
     logging.info("Database connection closed")
+
 
     print(summary)
 
